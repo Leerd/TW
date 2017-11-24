@@ -1,0 +1,14 @@
+﻿
+<div *ngFor="let game of games">
+   <p>{{game.name}}</p> <input type="checkbox" id="subscribeNews" name="subscribe" value="game.id" [ngModel]="checkBox" (change)="updateGameStatus(game.id)">
+</div>
+<div>
+    <input type="file" name="upload" (change)="sendq($event)" /><br>
+    <input type="submit" value="Загрузить" />
+    <button>Отправить</button>
+    <button (click)="getgame()">Получить</button>
+</div>
+
+<input [(ngModel)]="authorizationModel.login" type="text" />
+<input [(ngModel)]="authorizationModel.password" type="text" />
+<button (click)="send()"></button>
